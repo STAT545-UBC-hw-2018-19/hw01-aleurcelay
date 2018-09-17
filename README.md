@@ -10,7 +10,7 @@ In the R Markdown file I explored the gapminder dataset.
 ## About myself :raising_hand:
 I am an international graduate student at the [Institute for Resources, Environment & Sustainability](http://ires.ubc.ca) at UBC. I am originally from Mexico City, where I completed a BS in Environmental Engineering. 
 
-Some or my hobbies are:
+Some of my hobbies are:
 * traveling
 * sports
   + hiking 
