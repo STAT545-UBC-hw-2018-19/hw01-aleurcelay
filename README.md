@@ -5,7 +5,6 @@
 This is the repository of my homework 1 for STAT545.
 
 In this assignment I used GitHub-Flavoured Markdown and R Markdown to get familiar with GitHub, markdown and R.
-In the R Markdown file I explored the gapminder dataset.
 
 ## About myself :raising_hand:
 I am an international graduate student at the [Institute for Resources, Environment & Sustainability](http://ires.ubc.ca) at UBC. I am originally from Mexico City, where I completed a BS in Environmental Engineering. 
