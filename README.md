@@ -17,7 +17,7 @@ Some or my hobbies are:
   + yoga
 * music concerts
 
-### *My research* :female-scientist:
+### *My research* :female_scientist:
 I am part of the [Ecohydrology lab](http://ecohydro.ires.ubc.ca) at UBC focusing on forest management approaches and source water protection and quality.
 **This research has the potential to provide insights and valuable information towards water security increase in Canada and other places around the world.**
 
