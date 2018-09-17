@@ -4,8 +4,8 @@
 
 This is the repository of my homework 1 for STAT545.
 
-In this assignment I explored GitHub-Flavoured Markdown and R Markdown.
-In the R Markdown file I explored gapminder dataset.
+In this assignment I used GitHub-Flavoured Markdown and R Markdown to get familiar with GitHub, markdown and R.
+In the R Markdown file I explored the gapminder dataset.
 
 ## About myself :raising_hand:
 I am an international graduate student at the [Institute for Resources, Environment & Sustainability](http://ires.ubc.ca) at UBC. I am originally from Mexico City, where I completed a BS in Environmental Engineering. 
@@ -15,9 +15,10 @@ Some or my hobbies are:
 * sports
   + hiking 
   + yoga
+  + tennis
 * music concerts
 
-### *My research* :female_scientist:
+### *My research* :evergreen_tree:
 I am part of the [Ecohydrology lab](http://ecohydro.ires.ubc.ca) at UBC focusing on forest management approaches and source water protection and quality.
 **This research has the potential to provide insights and valuable information towards water security increase in Canada and other places around the world.**
 
