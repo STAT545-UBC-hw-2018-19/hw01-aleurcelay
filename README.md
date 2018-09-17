@@ -8,8 +8,7 @@ In this assignment I explored GitHub-Flavoured Markdown and R Markdown.
 
 The R Markdown file shows... 
 
-## About myself 
-:raising_hand:
+## About myself :raising_hand:
 I am an international graduate student at IRES (Institute for Resources, Environment & Sustainability) at UBC. I am originally from Mexico City, where I completed a BAS in Environmental Engineering. 
 
 ### *My research*
