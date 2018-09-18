@@ -94,14 +94,10 @@ gapminder %>%
   summarize(n_obs = n(), n_countries = n_distinct(country))
 ```
 
-    ## # A tibble: 5 x 3
-    ##   continent n_obs n_countries
-    ##   <fct>     <int>       <int>
-    ## 1 Africa      624          52
-    ## 2 Americas    300          25
-    ## 3 Asia        396          33
-    ## 4 Europe      360          30
-    ## 5 Oceania      24           2
+# A tibble: 5 x 3
+
+continent n\_obs n\_countries <fct> <int> <int> 1 Africa 624 52 2
+Americas 300 25 3 Asia 396 33 4 Europe 360 30 5 Oceania 24 2
 
 It is also possible to visually compare different data subsets. For
 example, let’s compare the life expentancy between Canada and Mexico:

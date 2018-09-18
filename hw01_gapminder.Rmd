@@ -48,7 +48,7 @@ I can also see useful information about my dataset, including the type of data f
 str(gapminder)
 ```
 I can create tables that summarize information. For example, number of observations and countries per continent:
-```{r}
+```{r, results = 'asis'}
 gapminder %>%
   group_by(continent) %>%
   summarize(n_obs = n(), n_countries = n_distinct(country))
@@ -57,7 +57,8 @@ gapminder %>%
 It is also possible to visually compare different data subsets. For example, let's compare the life expentancy between Canada and Mexico:
 
 ```{r}
-plot(lifeExp ~ year, gapminder, subset = country == "Canada", 
+plot(lifeExp ~ year, gapminder, 
+     subset = country == "Canada", 
      type = "b", 
      main = "Life Expentancy in Canada", 
      xlab = "", 
@@ -67,7 +68,8 @@ plot(lifeExp ~ year, gapminder, subset = country == "Canada",
 
 
 ```{r}
-plot(lifeExp ~ year, gapminder, subset = country == "Mexico", 
+plot(lifeExp ~ year, gapminder, 
+     subset = country == "Mexico", 
      type = "b", 
      main = "Life Expentancy in Mexico", 
      xlab = "", 
