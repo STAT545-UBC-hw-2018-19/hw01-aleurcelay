@@ -15,46 +15,50 @@ This is an R Markdown document used for exploring a dataset using basic R functi
 
 I included R code to explore the data set.
 
-First, we need to install the gapminder package:
-```{r}
-install.packages("gapminder")
-```
-
 Loading the gapminder dataset afer installing the package:
 ```{r}
 library(gapminder)
 ```
 
-Now I want to know the class of the data, a summary of it and the first few values to have an idea of which type of data am I dealing with:
+Now, I want to know the class of the data, a summary of it and the first few values to have an idea of which type of data I'm dealing with:
 ```{r}
 class(gapminder)
 summary(gapminder)
 head(gapminder)
 ```
-n_obs$countries
+I also want to know how big is my data set (number of rows and columns)
+
+```{r}
+dim(gapminder)
+```
+I can also see useful information about my dataset, including the type of data for each column with str() function:
+```{r}
+str(gapminder)
+```
+I can create tables that summarize information. For example, number of observations and countries per continent:
+```{r}
+gapminder %>%
+  group_by(continent) %>%
+  summarize(n_obs = n(), n_countries = n_distinct(country))
+```
+
+It is also possible to visually compare different data subsets. For example, let's compare the life expentancy between Canada and Mexico:
+
+```{r}
+plot(lifeExp ~ year, gapminder, subset = country == "Canada", 
+     type = "b", 
+     main = "Life Expentancy in Canada", 
+     xlab = "", 
+     ylab = "Life Expectancy (years)",
+     col = "red")
+```
 
 
 ```{r}
-plot(lifeExp ~ year, gapminder, subset = country == "Mexico", type ="b")
+plot(lifeExp ~ year, gapminder, subset = country == "Mexico", 
+     type = "b", 
+     main = "Life Expentancy in Mexico", 
+     xlab = "", 
+     ylab = "Life Expectancy (years)",
+     col  = "darkgreen")
 ```
-
-
-
-
-## Including Plots
-```{r}
-year <- gapminder[3]
-pop <- gapminder[5]
-
-data<- data.frame(year,pop)
-plot(data)
-
-```
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
