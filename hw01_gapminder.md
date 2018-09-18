@@ -1,7 +1,7 @@
 Alejandra\_hw01\_gapminder
 ================
 
-## Gapminder Exploration
+## Gapminder Exploration :woman\_technologist:
 
 This is an R Markdown document used for exploring a dataset using basic
 R functions. Here I used gapminder data, which includes data on life
