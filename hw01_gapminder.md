@@ -1,7 +1,7 @@
 Alejandra\_hw01\_gapminder
 ================
 
-## Gapminder Exploration :woman\_technologist:
+## Gapminder Exploration
 
 This is an R Markdown document used for exploring a dataset using basic
 R functions. Here I used gapminder data, which includes data on life
@@ -11,7 +11,7 @@ expectancy, GDP per capita, and population by country.
 
 I included R code to explore the data set.
 
-Loading the gapminder dataset afer installing the package:
+Loading the gapminder dataset afer installing the necessary packages:
 
 ``` r
 library(gapminder)
@@ -85,37 +85,45 @@ str(gapminder)
     ##  $ pop      : int  8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...
     ##  $ gdpPercap: num  779 821 853 836 740 ...
 
-I can create tables that summarize information. For example,
+I can create tables that summarize information. For example, number of
+observations and countries per continent:
 
 ``` r
-table(gapminder$continent)
+gapminder %>%
+  group_by(continent) %>%
+  summarize(n_obs = n(), n_countries = n_distinct(country))
 ```
 
-    ## 
-    ##   Africa Americas     Asia   Europe  Oceania 
-    ##      624      300      396      360       24
+    ## # A tibble: 5 x 3
+    ##   continent n_obs n_countries
+    ##   <fct>     <int>       <int>
+    ## 1 Africa      624          52
+    ## 2 Americas    300          25
+    ## 3 Asia        396          33
+    ## 4 Europe      360          30
+    ## 5 Oceania      24           2
+
+It is also possible to visually compare different data subsets. For
+example, let’s compare the life expentancy between Canada and Mexico:
 
 ``` r
-plot(lifeExp ~ year, gapminder, subset = country == "Mexico", type ="b")
+plot(lifeExp ~ year, gapminder, subset = country == "Canada", 
+     type = "b", 
+     main = "Life Expentancy in Canada", 
+     xlab = "", 
+     ylab = "Life Expectancy (years)",
+     col = "red")
 ```
 
-![](hw01_gapminder_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
-
-## Including Plots
+![](hw01_gapminder_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
-year <- gapminder[3]
-pop <- gapminder[5]
-
-data<- data.frame(year,pop)
-plot(data)
+plot(lifeExp ~ year, gapminder, subset = country == "Mexico", 
+     type = "b", 
+     main = "Life Expentancy in Mexico", 
+     xlab = "", 
+     ylab = "Life Expectancy (years)",
+     col  = "darkgreen")
 ```
 
-![](hw01_gapminder_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
-
-You can also embed plots, for example:
-
-![](hw01_gapminder_files/figure-gfm/pressure-1.png)<!-- -->
-
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+![](hw01_gapminder_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->

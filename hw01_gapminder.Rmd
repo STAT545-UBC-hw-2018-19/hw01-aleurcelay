@@ -15,10 +15,22 @@ This is an R Markdown document used for exploring a dataset using basic R functi
 
 I included R code to explore the data set.
 
-Loading the gapminder dataset afer installing the package:
+
+Loading the gapminder dataset afer installing the necessary packages:
+```{r include = FALSE}
+install.packages("dplyr", repos = "http://cran.us.r-project.org")
+```
+```{r include = FALSE}
+library(dplyr)
+```
+
+```{r include = FALSE}
+install.packages("gapminder", repos = "http://cran.us.r-project.org")
+```
 ```{r}
 library(gapminder)
 ```
+
 
 Now, I want to know the class of the data, a summary of it and the first few values to have an idea of which type of data I'm dealing with:
 ```{r}
