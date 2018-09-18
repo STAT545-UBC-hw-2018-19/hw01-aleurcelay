@@ -17,7 +17,7 @@ I included R code to explore the data set.
 
 First, we need to install the gapminder package:
 ```{r}
-install.packages("gapminder", repos = "http://cran.us.r-project.org")
+install.packages("gapminder")
 ```
 
 Loading the gapminder dataset afer installing the package:
