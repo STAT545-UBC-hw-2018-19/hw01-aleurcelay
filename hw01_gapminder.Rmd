@@ -47,8 +47,8 @@ I can also see useful information about my dataset, including the type of data f
 ```{r}
 str(gapminder)
 ```
-I can create tables that summarize information. For example, number of observations and countries per continent:
-```{r, results = 'asis'}
+I can summarize information. For example, number of observations and countries per continent:
+```{r}
 gapminder %>%
   group_by(continent) %>%
   summarize(n_obs = n(), n_countries = n_distinct(country))

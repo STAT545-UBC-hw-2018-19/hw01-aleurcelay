@@ -85,8 +85,8 @@ str(gapminder)
     ##  $ pop      : int  8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...
     ##  $ gdpPercap: num  779 821 853 836 740 ...
 
-I can create tables that summarize information. For example, number of
-observations and countries per continent:
+I can summarize information. For example, number of observations and
+countries per continent:
 
 ``` r
 gapminder %>%
@@ -94,16 +94,21 @@ gapminder %>%
   summarize(n_obs = n(), n_countries = n_distinct(country))
 ```
 
-# A tibble: 5 x 3
-
-continent n\_obs n\_countries <fct> <int> <int> 1 Africa 624 52 2
-Americas 300 25 3 Asia 396 33 4 Europe 360 30 5 Oceania 24 2
+    ## # A tibble: 5 x 3
+    ##   continent n_obs n_countries
+    ##   <fct>     <int>       <int>
+    ## 1 Africa      624          52
+    ## 2 Americas    300          25
+    ## 3 Asia        396          33
+    ## 4 Europe      360          30
+    ## 5 Oceania      24           2
 
 It is also possible to visually compare different data subsets. For
 example, let’s compare the life expentancy between Canada and Mexico:
 
 ``` r
-plot(lifeExp ~ year, gapminder, subset = country == "Canada", 
+plot(lifeExp ~ year, gapminder, 
+     subset = country == "Canada", 
      type = "b", 
      main = "Life Expentancy in Canada", 
      xlab = "", 
@@ -114,7 +119,8 @@ plot(lifeExp ~ year, gapminder, subset = country == "Canada",
 ![](hw01_gapminder_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
-plot(lifeExp ~ year, gapminder, subset = country == "Mexico", 
+plot(lifeExp ~ year, gapminder, 
+     subset = country == "Mexico", 
      type = "b", 
      main = "Life Expentancy in Mexico", 
      xlab = "", 
