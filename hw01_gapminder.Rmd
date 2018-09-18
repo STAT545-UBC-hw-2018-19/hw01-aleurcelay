@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Gapminder Exploration
+## Gapminder Exploration :woman_technologist:
 
 This is an R Markdown document used for exploring a dataset using basic R functions. Here I used gapminder data, which includes data on life expectancy, GDP per capita, and population by country.
 
