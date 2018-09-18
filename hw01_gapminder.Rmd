@@ -9,23 +9,47 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Gapminder Exploration
 
-This is an R Markdown document used for exploring a dataset. In this case I used gapminder.
+This is an R Markdown document used for exploring a dataset using basic R functions. Here I used gapminder data, which includes data on life expectancy, GDP per capita, and population by country.
 
-format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+## R Code
 
-## Including Code
+I included R code to explore the data set.
 
-I included R code to explore the data set:
+First, we need to install the gapminder package:
+```{r}
+install.packages("gapminder", repos = "http://cran.us.r-project.org")
+```
+
+Loading the gapminder dataset afer installing the package:
+```{r}
+library(gapminder)
+```
+
+Now I want to know the class of the data, a summary of it and the first few values to have an idea of which type of data am I dealing with:
+```{r}
+class(gapminder)
+summary(gapminder)
+head(gapminder)
+```
+n_obs$countries
+
 
 ```{r}
-install.packages('gapminder', repos = "http://cran.us.r-project.org")
-library(gapminder)
-gapminder
-summary(gapminder)
+plot(lifeExp ~ year, gapminder, subset = country == "Mexico", type ="b")
 ```
 
 
+
+
 ## Including Plots
+```{r}
+year <- gapminder[3]
+pop <- gapminder[5]
+
+data<- data.frame(year,pop)
+plot(data)
+
+```
 
 You can also embed plots, for example:
 
