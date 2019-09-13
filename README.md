@@ -29,5 +29,7 @@ You can find useful information in the webpage from the [STAT545 Exploratory Dat
 ## To-Dos
 
 - [x] Homework 1
+- [ ] Homework 1
+
 
 
